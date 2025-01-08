@@ -2,11 +2,11 @@ import { useState } from "react";
 
 import "../style.css";
 
-function AccordionItem({ number, question, answer }) {
-  const [isOpen, setIsOpen] = useState(false);
+function AccordionItem({ number, question, answer, curOpen, onOpen }) {
+  const isOpen = number === curOpen;
 
   function handleToggle() {
-    setIsOpen((isOpen) => !isOpen);
+    onOpen(number);
   }
 
   return (
