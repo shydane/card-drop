@@ -6,7 +6,7 @@ function AccordionItem({ number, question, answer, curOpen, onOpen }) {
   const isOpen = number === curOpen;
 
   function handleToggle() {
-    onOpen(number);
+    onOpen(isOpen ? null : number);
   }
 
   return (
